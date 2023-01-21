@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color :#0A3871;
+}
+
+body{
+    background-color: #E5E5E5   ;
+}
+
+.header{
+    height: 15%;
+    width: 60%;
+}
+
+.header h1{
+   padding: 40px 70px;
+}
+
+.principal-container{
+    font-size: 20px;
+    width: 65%;
+    height: 85%;
+    padding: 20px 50px 0 220px;
+}
+
+.principal-container_div{
+    width: 90%;
+    height: 75%;
+}
+
+.input-text_container{
+    height: 95%;
+}
+
+
+.input-text{
+    display: block;
+    background: none;
+    border: none;
+    padding:5px 10px 0 10px;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    line-height: 150%;
+    outline: none;
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 15%;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+.output-container{
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+    padding: 30px;
+    top: 0;
+    right: 0;
+}
+
+.output-container_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 35px;
+    text-align: center;
+    height: 100%;
+    width: 85%;
+}
+
+.output-text{
+    height: 100%;
+    width: auto;
+    margin: 20px 10px 10px 0;
+    border: none;
+    user-select: none;
+    padding: 20px 15px;
+    background: none;
+    resize: none;
+}
+
+.output-text::-webkit-scrollbar {
+        width: 12px;
+        background-color: #fff;
+}
+.input-text::-webkit-scrollbar{
+    width: 12px;
+    background-color: #E5E5E5;
+}
+.output-text::-webkit-scrollbar-thumb, .input-text::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #0A3871;
+}
+
+.output-container img{
+    width: 60%;
+    margin: 15px auto;
+}
+
+
+.error-alert{
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0 15px;
+}
+
+.input-text, .output-text{
+    color: #0A3871;
+    font-size: 32px;
+}
+
+
+/*BOTONES*/
+
+.button{
+    font-size: 20px;
+    width: 40%;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.encrypt-button{
+    background-color: #0A3871;
+    color: #ffffff; 
+    border: none;
+}
+
+.copy-text-button{
+    width: 50%;
+    font-size: 22px;
+    padding: 15px 0;
+    margin: 15px auto;
+}
+
+
+/*ANIMACIONES*/
+
+
+
+
+
+
+@media screen and (max-width: 770px) {
+
+    .output-container,.header,.principal-container{
+        width: auto;
+        margin: 0 40px;
+        padding: 0;
+        display: block;
+    }
+
+    .principal-container{
+        height: 65%;
+    }
+
+    .principal-container_div{
+        width: 100%;
+        height: 85%;
+    }
+
+    .input-text{
+        height: 110%;
+    }
+
+    .buttons-container{
+        width: auto;
+        height: auto;
+        position: static;
+    }
+
+    .button{
+        height: 67px;
+        width: 45%;
+        margin: 0 auto;
+    }
+    
+    
+    .output-container{
+        position: static;
+        height: auto;
+    }
+
+    
+    .output-container_div{
+        height: auto;
+        padding: 20px 0;
+        margin: 20px auto;
+    }
+
+
+    .output-container img{
+        display: none;
+    }
+
+    .copy-text-button{
+        width: 89%;
+        margin: 20px 30px;
+    }
+    
+}
+
+
+@media screen and (max-width:380px) {
+
+    .output-container, .header, .principal-container {
+        width: auto;
+        margin: 0 24px;
+        padding: 0;
+        display: block;
+    }
+
+    .header{
+        padding: 0;
+        margin: 0;
+    }
+
+    .header h1{
+        padding: 0;
+        margin: 20px 10px;
+    }
+
+    .principal-container{
+        margin-bottom: 20px;
+    }
+    
+    .input-text_container {
+        height: 52%;
+    }
+
+    .buttons-container{
+        display: block;
+    }
+    
+    .buttons-container button{
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+
+    .buttons-container{
+        position: static;
+    }
+
+    .output-container{
+        margin: 0;
+    }
+    
+    .copy-text-button{
+        width: auto;
+    }
+
+}
