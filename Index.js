@@ -131,6 +131,18 @@ function changeDisplay() {
         errorAlert.style.display = "block";
     }
 }
+
+function updateClipboard(){
+    navigator.permissions.query({name: "clipboard-write"}).then((result) => {
+    if (result.state === "granted" || result.state === "prompt") {
+      /* write to the clipboard now */
+    }
+  });
+  
+}
+
+updateClipboard()
+
 encryptButton.onclick = encryptText;
 
 unencryptButton.onclick = unencryptText;
