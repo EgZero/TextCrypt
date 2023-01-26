@@ -133,17 +133,11 @@ function changeDisplay() {
 }
 
 function updateClipboard(){
-    navigator.permissions.query({name: "clipboard-write"}).then((result) => {
-    if (result.state === "granted" || result.state === "prompt") {
-      /* write to the clipboard now */
+        navigator.clipboard.writeText(outputText.textContent);
     }
-  });
-  
-}
 
-updateClipboard()
 
 encryptButton.onclick = encryptText;
-
+copyText.onclick = updateClipboard;
 unencryptButton.onclick = unencryptText;
 changeDisplay();

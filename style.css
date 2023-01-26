@@ -131,6 +131,10 @@ body {
     margin: 0 auto;
 }
 
+.button:hover{
+    cursor: pointer;
+}
+
 .encrypt-button {
     background-color: #0A3871;
     color: #ffffff;
