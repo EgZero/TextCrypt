@@ -9,28 +9,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
+    <header class="header">
         <h1 class="logo">
             TextCrypt
         </h1>
-    </div>
-    <Main class="principal-container">
+    </header>
+    <section class="principal-container">
         <div class="principal-container_div">
 
             <div class="input-text_container">
-                <textarea placeholder="Ingrese su texto aqui" class="input-text"></textarea>
+                <textarea placeholder="Ingrese su texto aqui" cols="auto" rows="auto" class="input-text"></textarea>
             </div>
-
+            <p class="input-text_alert">Solo caracteres en minuscula y sin acentos</p>
             <div class="buttons-container">    
                 <button class='encrypt-button button'>Encriptar</button>
                 <button class='unencrypt-button button'>Desencriptar</button>
             </div>
         </div>
-    </Main>
+    </section>
     
-    <aside class="output-container">
+    <section class="output-container">
             <div class="output-container_div">
-                <textarea class="output-text" disabled></textarea>
+                <textarea class="output-text"  cols="auto" rows="auto"disabled></textarea>
                 <div class="error-alert">
                     <img src="Resources/Muñeco.png">
                     <p class="output-alert alert1">El mensaje no se ha encontrado...</p>
@@ -38,8 +38,7 @@
                 </div>
                 <button class="copy-text-button button">Copiar</button>
             </div>
-    </aside>
-    <button type="button" onclick="console.clear()">clear</button>
+    </section>
 
 </body>
 <script src="Index.js"></script>

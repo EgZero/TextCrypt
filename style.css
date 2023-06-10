@@ -10,31 +10,11 @@ body {
     background-color: #E5E5E5;
 }
 
+
+
 .header {
-    height: 15%;
-    width: 60%;
+    height: 12%;
 }
-
-.header h1 {
-    padding: 40px 70px;
-}
-
-.principal-container {
-    font-size: 20px;
-    width: 65%;
-    height: 85%;
-    padding: 20px 50px 0 220px;
-}
-
-.principal-container_div {
-    width: 90%;
-    height: 75%;
-}
-
-.input-text_container {
-    height: 95%;
-}
-
 
 .input-text {
     display: block;
@@ -44,7 +24,7 @@ body {
     resize: none;
     width: 100%;
     height: 100%;
-    line-height: 150%;
+    line-height: 1.1;
     outline: none;
     color: #0A3871;
     font-size: 32px;
@@ -54,18 +34,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    height: 15%;
-    margin-top: 20px;
-}
-
-.output-container {
-    position: absolute;
-    height: 100%;
-    width: 40%;
-    display: inline-block;
-    padding: 30px;
-    top: 0;
-    right: 0;
 }
 
 .output-container_div {
@@ -73,12 +41,9 @@ body {
     flex-direction: column;
     justify-content: center;
     font-size: 32px;
-    margin: 0 auto;
     background-color: #FFFFFF;
     border-radius: 35px;
     text-align: center;
-    height: 100%;
-    width: 400px;
 }
 
 .output-text {
@@ -109,31 +74,31 @@ body {
     background-color: #0A3871;
 }
 
-.output-container img {
-    width: 60%;
-    margin: 15px auto;
-}
-
 
 .error-alert {
-    font-size: 25px;
+    font-size: 1.5rem;
     line-height: 1.5;
     margin: 0 15px;
-}
+}   
 
+.output-alert{
+    color: #000e;
+}
+.alert1{
+    font-weight: 700;
+}
 
 /*BOTONES*/
 
 .button {
     font-size: 20px;
-    width: 40%;
     border-radius: 15px;
-    margin: 0 auto;
 }
 
 .button:hover{
     cursor: pointer;
 }
+
 
 .encrypt-button {
     background-color: #0A3871;
@@ -141,86 +106,14 @@ body {
     border: none;
 }
 
-.copy-text-button {
-    width: 336px;
-    font-size: 22px;
-    padding: 15px 0;
-    margin: 32px auto;
-}
 
 
-/*ANIMACIONES*/
-
-
-
-
-
-
-@media screen and (max-width: 770px) {
+@media screen and (min-width:0px) {
 
     .output-container,
     .header,
     .principal-container {
         width: auto;
-        margin: 0 40px;
-        padding: 0;
-        display: block;
-    }
-
-    .principal-container {
-        height: 65%;
-    }
-
-    .principal-container_div {
-        width: 100%;
-        height: 85%;
-    }
-
-    .buttons-container {
-        width: auto;
-        height: auto;
-        position: static;
-    }
-
-    .button {
-        height: 67px;
-        width: 45%;
-        margin: 0 auto;
-    }
-
-
-    .output-container {
-        position: static;
-        height: auto;
-    }
-
-
-    .output-container_div {
-        height: 343px;
-        margin: 20px auto;
-        width: auto;
-    }
-
-
-    .output-container img {
-        display: none;
-    }
-
-    .copy-text-button {
-        width: 89%;
-        margin: 20px 30px;
-    }
-
-}
-
-
-@media screen and (max-width:380px) {
-
-    .output-container,
-    .header,
-    .principal-container {
-        width: auto;
-        margin: 0 24px;
         padding: 0;
         display: block;
     }
@@ -232,7 +125,7 @@ body {
 
     .header h1 {
         padding: 0;
-        margin: 20px 10px;
+        margin: 30px 10px 20px 10px;
     }
 
     .principal-container {
@@ -243,27 +136,122 @@ body {
         height: 52%;
     }
 
-    .buttons-container {
-        display: block;
+    .input-text_alert{
+        font-size: .7rem;
+        line-height: 1.5;
+        margin-left: .8rem;
     }
 
-    .buttons-container button {
-        display: block;
-        margin-top: 20px;
-        width: 100%;
+    .buttons-container {
+        flex-direction: column;
+        margin: auto;
     }
 
-
-    .buttons-container {
-        position: static;
+    .button{
+        display: inline-block;
+        padding: 1rem;
+        margin: 0 1rem;
+        width: auto;
     }
 
     .output-container {
-        margin: 0;
+        margin: .5rem;
+        height: 65%;
+    }
+
+    .output-container_div{
+        padding: 1.5rem 0;
+        height: 100%;
+    }
+    
+    .output-container img {
+        display: none;
     }
 
     .copy-text-button {
+        margin-top: .5rem;
         width: auto;
     }
 
 }
+
+
+
+@media screen and (min-width: 768px) {
+
+    .output-container,
+    .header,
+    .principal-container {
+        margin: 0 40px;
+        padding: 0;
+        display: block;
+    }
+    .input-text_container{
+        height: 70%;
+    }
+
+    .output-container {
+        height: auto;
+    }
+
+
+    .output-container_div {
+        height: 60%;
+        margin: 20px auto;
+        width: auto;
+    }
+
+
+    .buttons-container {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .button{
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    .copy-text-button {
+        width: 89%;
+        margin: 20px 30px;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    .output-container,
+    .header,
+    .principal-container {
+        margin: 0 1rem;
+    }
+    .principal-container{
+        display: inline-block;
+        width: 55%;
+        margin-left: 100px ;
+    }
+
+    .input-text_container{
+        height: 60%;
+    }
+    .output-container{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 90%;
+    }
+    .output-container img { 
+        width: 60%;
+        margin: auto;
+        display: block;
+    }
+    .output-container_div{
+        height: 100%;
+    }
+}
+
+
+
+/*ANIMACIONES*/
+

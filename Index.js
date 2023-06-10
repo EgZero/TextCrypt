@@ -1,11 +1,11 @@
 
 
-let copyText = document.querySelector(".copy-text-button");
-let inputText = document.querySelector(".input-text");
-let outputText = document.querySelector(".output-text");
-let encryptButton = document.querySelector(".encrypt-button");
-let unencryptButton = document.querySelector(".unencrypt-button");
-let errorAlert = document.querySelector(".error-alert");
+const copyText = document.querySelector(".copy-text-button");
+const inputText = document.querySelector(".input-text");
+const outputText = document.querySelector(".output-text");
+const encryptButton = document.querySelector(".encrypt-button");
+const unencryptButton = document.querySelector(".unencrypt-button");
+const errorAlert = document.querySelector(".error-alert");
 let boolean = false;
 let encryptedText, unencryptedText, subText;
 let textContent = false;
@@ -34,6 +34,7 @@ function encryptText() {
     } else {
 
         let text = inputText.value
+        text = text.toLowerCase();
         encryptedText = ""
 
         for (i = 0; i <= textLength - 1; i++) {
